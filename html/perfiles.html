@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div class="navbar" id="navbar">
+        <ul>
+            <img src="https://sic.cultura.gob.mx/images/65091">
+            <li><a href="Home.html"><box-icon type='solid' name='dashboard'></box-icon>Dashboard</a></li>
+            <li><a href="Home.html"><box-icon name='table'></box-icon>Tablero</a></li>
+            <li ><a href="Encuestas.html"><box-icon name='notepad' ></box-icon>Encuestas</a></li>
+            <li><a href="Home.html"><box-icon name='briefcase' ></box-icon>Vacantes</a></li>
+            <li><a href="Home.html"><box-icon name='user-circle' type='solid' ></box-icon>Perfil</a></li>
+        </ul>
+    </div>
+
+    <div class="navbar2" id="navbar2">
+        <ul>
+            <p>Cuestionario de seguimientos de egresados</p>
+            <li><a href="#">Cerrar sección</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <form>
+            <input type="checkbox" id="check-seccion-01" onclick="handleCheckboxClick('../html/preliminar.html')">
+            <label for="check-seccion-01">01 Preliminar</label>
+        
+            <input type="checkbox" id="check-seccion-02" onclick="handleCheckboxClick('check-seccion-02')">
+            <label for="check-seccion-02">02 Instrucciones</label>
+        
+            <input type="checkbox" id="check-seccion-03" onclick="handleCheckboxClick('check-seccion-03')">
+            <label for="check-seccion-03">03 Perfiles</label>
+        
+            <input type="checkbox" id="check-seccion-04" onclick="handleCheckboxClick('check-seccion-04')">
+            <label for="check-seccion-04">04 Ubicación Laboral</label>
+        
+            <input type="checkbox" id="check-seccion-05" onclick="handleCheckboxClick('check-seccion-05')">
+            <label for="check-seccion-05">05 Desempeño y Expectativas</label>
+        </form>
+    </div>
+
+    <div class="cuestionario">
+        <button class="tablink" onclick="openTab('preliminar')">Preliminar</button>
+        <button class="tablink" onclick="openTab('tresMinutos')">Aprox. 3 minutos</button>
+
+        <div id="preliminar" class="tabcontent">
+            <!-- Contenido de la pestaña "Preliminar" -->
+
+            <div class="content-wrapper">
+
+                <img src="https://sic.cultura.gob.mx/images/65091" class="side-image">
+
+                <div class="text-content">
+                    <p>Instituto tecnologico de minatitlán</p>
+
+                </div>
+
+                <div id="tresMinutos" class="tabcontent" style="display: block; text-align: center;">
+                    <!-- Contenido de la pestaña "Aprox. 3 minutos" -->
+                </div>
+            </div>
+
+            <button id="goBack">Regresar</button>
+            <button id="goForward" onclick="marcarAnteriores()">Siguiente</button>
+
+            <script src="../scripts/ocultar.js"></script>
+            <script src="../scripts/tabs.js"></script>
+            <script src="../scripts/navigationAndCheckboxes.js"></script>
+
+        </div>
+        
+    </body>
+
+</html>
